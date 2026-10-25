@@ -1,0 +1,16 @@
+{
+  "name": "elektro-bud-magazyn",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "npm": "^12.2.1",
+    "run": "^2.1.10"
+  }
+}
