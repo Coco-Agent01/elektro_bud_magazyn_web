@@ -1,3 +1,4 @@
+// stworzenie typu produktu do przechowania inf o nich
 type Produkt = {
     ean: string;
     nazwa: string;
@@ -5,7 +6,7 @@ type Produkt = {
     lokalizacja: string;
     ilosc: number;
 };
-
+// stworzenie tablicy z nimi do przechowania danych 
 const produkty: Produkt[] = [
     {
         ean: "5901234567890",
@@ -29,11 +30,11 @@ const produkty: Produkt[] = [
         ilosc: 0
     }
 ];
-
+// pobieranie rzeczy z html 
 const szukaj = document.getElementById("szukaj") as HTMLInputElement;
 const przycisk = document.getElementById("przycisk") as HTMLButtonElement;
 const wynik = document.getElementById("wynik") as HTMLDivElement;
-
+// funkcja służąca do wyszukiwnia 
 function wyszukajProdukt(): void {
     const tekst = szukaj.value.trim().toLowerCase();
 
@@ -48,7 +49,7 @@ function wyszukajProdukt(): void {
         wynik.textContent = "Nie znaleziono produktu.";
         return;
     }
-
+// wyświetlanie
     znalezione.forEach(produkt => {
         const element = document.createElement("p");
 
@@ -62,12 +63,11 @@ function wyszukajProdukt(): void {
         wynik.appendChild(element);
     });
 }
-
+// dodanie event listenera do przycisku
 przycisk.addEventListener("click", wyszukajProdukt);
-
-szukaj.addEventListener("keydown", zdarzenie => {
-    if (zdarzenie.key === "Enter") {
-        wyszukajProdukt();
-    }
-});
 //zródła
+//chat gpt do pomocy i przerobienia pliku od pana
+//pana github zeby miec plik do przerobienia rzeby nie zaczynać od zera 
+//w3schools do poduczenia się typescirpta i ogólnie zrozumienie niektórych rzeczy
+// z pełną szczerością się przyznam że ai było troche uzywane i nie wysztko jest zrobione przezemnie ponieważ nie korzystałem zbytio
+//nigdy z tego więc użyłem do pomocy 
